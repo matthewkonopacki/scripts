@@ -1,0 +1,7 @@
+import BaseScript from "../base-script.js";
+
+class {{className}} extends BaseScript {
+    public async run(): Promise<void> {}
+}
+
+export default {{className}}

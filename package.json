@@ -2,19 +2,25 @@
   "name": "scripts",
   "version": "1.0.0",
   "main": "dist/index.js",
+  "type": "module",
   "scripts": {
-    "start": "node dist/main.js",
-    "build": "tsc"
+    "start": "npm run build && node --es-module-specifier-resolution=node ./dist/main.js --yo cool",
+    "build": "tsc",
+    "createScript": "scripts/createScript.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@types/yargs": "^17.0.33",
     "typescript": "^5.6.3"
   },
   "dependencies": {
     "@types/node": "^22.9.1",
-    "ts-node": "^10.9.2"
+    "mustache": "^4.2.0",
+    "prettier": "^3.3.3",
+    "ts-node": "^10.9.2",
+    "yargs": "^17.7.2"
   }
 }
